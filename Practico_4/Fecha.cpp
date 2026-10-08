@@ -3,7 +3,7 @@ class Fecha
     private:
         int dia, mes, anio;
 
-    public :
+    public:
         // Constructor por defecto
         Fecha (){
             dia = 1;
@@ -33,32 +33,34 @@ class Fecha
         }
 
         // Métodos de la clase
-        Fecha Copia(const Fecha& F){
-            return Fecha(F.dia, F.mes, F.anio);
+        Fecha(const Fecha& F){
+            dia = F.dia;
+            mes = F.mes;
+            anio = F.anio;
         }
 
-        int Fecha :: getDia(){ 
+        int getDia(){ 
             return dia; 
         }
-        int Fecha :: getMes(){ 
+        int getMes(){ 
             return mes; 
         }
-        int Fecha :: getAnio(){ 
+        int getAnio(){ 
             return anio; 
         }
 
-        Fecha :: ~Fecha (){ 
+        ~Fecha (){ 
 
         } 
 
         //determina si ambas fechas son iguales
-        bool operator ==(Fecha F1, Fecha F2){
-            return (F1.dia == F2.dia && F1.mes == F2.mes && F1.anio == F2.anio);
+        bool operator ==(Fecha F){
+            return (dia == F.dia && mes == F.mes && anio == F.anio);
         }
 
         //determina si la primer fecha es anterior a la segunda
-        bool operator <(Fecha F1, Fecha F2){
-            return (F1.anio < F2.anio || (F1.anio == F2.anio && F1.mes < F2.mes) || (F1.anio == F2.anio && F1.mes == F2.mes && F1.dia < F2.dia));
+        bool operator <(Fecha F){
+            return (anio < F.anio || (anio == F.anio && mes < F.mes) || (anio == F.anio && mes == F.mes && dia < F.dia));
         }
         
         //determina si la primer fecha es anterior a la segunda
