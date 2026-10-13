@@ -1,0 +1,33 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Compilar Fecha",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "-g",
+                "${workspaceFolder}/Practico_4/main.cpp",
+                "${workspaceFolder}/Practico_4/Fecha.cpp",
+                "-o",
+                "${workspaceFolder}/Practico_4/fecha_app"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compila el programa de fechas y genera Practico_4/fecha_app."
+        }
+    ],
+    "version": "2.0.0"
+}

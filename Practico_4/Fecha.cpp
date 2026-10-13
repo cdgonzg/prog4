@@ -1,5 +1,9 @@
 #include "Fecha.h"
 
+bool esBisiesto(int anio) {
+    return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
+}
+
 void Fecha::diaSiguiente() {
     if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
         if (dia == 30) {
@@ -37,10 +41,6 @@ void Fecha::diaSiguiente() {
     dia++;
 }
 
-bool esBisiesto(int anio) {
-    return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
-}
-
 Fecha::Fecha() {
     dia = 1;
     mes = 1;
@@ -56,7 +56,7 @@ Fecha::Fecha(int d, int m, int a) {
 Fecha::Fecha(const Fecha &otra) {
     dia = otra.dia;
     mes = otra.mes;
-    anio = otra.anio
+    anio = otra.anio;
 }
 
 int Fecha::getDia() { 
@@ -115,7 +115,7 @@ int Fecha::operator-(Fecha otra) {
     return diferencia;
 }
 
-bool Fecha::esValida() const {
+bool Fecha::esValida() {
     if (mes < 1 || mes > 12) return false;
     if (dia < 1 || dia > 31) return false;
 
