@@ -3,27 +3,24 @@
 
 class Fecha {
 private:
-    int dia;
-    int mes;
-    int anio;
-
+    int dia, mes, anio;
     void diaSiguiente();
 
 public:
     Fecha();
     Fecha(int, int, int);
-    Fecha(const Fecha&);
+    Fecha(const Fecha &);
 
-    int getDia() const;
-    int getMes() const;
-    int getAnio() const;
+    int getDia();
+    int getMes();
+    int getAnio();
 
-    bool operator==(const Fecha&) const;
-    bool operator<(const Fecha&) const;
-    Fecha& operator++();
-    Fecha operator+(int dias) const;
-    int operator-(const Fecha&) const;
-    bool esValida() const;
+    bool operator==(Fecha);
+    bool operator<(Fecha);
+    Fecha operator++();
+    Fecha operator+(int dias);
+    int operator-(Fecha);
+    bool esValida();
 };
 
 #endif
