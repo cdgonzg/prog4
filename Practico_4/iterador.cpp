@@ -1,8 +1,6 @@
 #include "iterador.h"
 
 Iterador(){
-    tope = 0;
-    actual = 0;
 }
 
 void agregar(Estadia){
