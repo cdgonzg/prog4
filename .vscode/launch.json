@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depurar practico 4",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Practico_4/fecha_app",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Practico_4",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Compilar practico 4",
+            "setupCommands": [
+                {
+                    "description": "Habilitar visualización de tipos de C++",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

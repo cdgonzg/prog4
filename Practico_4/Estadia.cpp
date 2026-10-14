@@ -7,7 +7,7 @@ Estadia::Estadia(){
 }
 
 Estadia::Estadia(int num, Fecha ing, Fecha sal){
-    numero = numero;
+    numero = num;
     fechaIngreso = ing;
     fechaSalida = sal;
 }
