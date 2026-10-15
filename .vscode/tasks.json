@@ -15,6 +15,7 @@
                 "${workspaceFolder}/Practico_4/Fecha.cpp",
                 "${workspaceFolder}/Practico_4/Estadia.cpp",
                 "${workspaceFolder}/Practico_4/iterador.cpp",
+                "${workspaceFolder}/Practico_4/Estadias.cpp",
                 "-o",
                 "${workspaceFolder}/Practico_4/fecha_app"
             ],
@@ -28,7 +29,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compila main.cpp, Fecha.cpp, Estadia.cpp e iterador.cpp y genera Practico_4/fecha_app."
+            "detail": "Compila main.cpp, Fecha.cpp, Estadia.cpp, iterador.cpp y Estadias.cpp y genera Practico_4/fecha_app."
         },
         {
             "type": "process",
