@@ -14,6 +14,7 @@
                 "${workspaceFolder}/Practico_4/main.cpp",
                 "${workspaceFolder}/Practico_4/Fecha.cpp",
                 "${workspaceFolder}/Practico_4/Estadia.cpp",
+                "${workspaceFolder}/Practico_4/iterador.cpp",
                 "-o",
                 "${workspaceFolder}/Practico_4/fecha_app"
             ],
@@ -27,7 +28,17 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compila main.cpp, Fecha.cpp y Estadia.cpp y genera Practico_4/fecha_app."
+            "detail": "Compila main.cpp, Fecha.cpp, Estadia.cpp e iterador.cpp y genera Practico_4/fecha_app."
+        },
+        {
+            "type": "process",
+            "label": "Ejecutar practico 4",
+            "command": "${workspaceFolder}/Practico_4/fecha_app",
+            "dependsOn": "Compilar practico 4",
+            "options": {
+                "cwd": "${workspaceFolder}/Practico_4"
+            },
+            "problemMatcher": []
         }
     ],
     "version": "2.0.0"

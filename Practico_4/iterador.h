@@ -4,10 +4,12 @@
 
 class Iterador {
 
-    private:  
+    private:
+        static constexpr int TAMANIO = 100;  
         Estadia iter [TAMANIO]; 
-        int tope,actual;
-
+        int tope;
+        int actual;
+        
     public:
         Iterador();
         void agregar(Estadia);

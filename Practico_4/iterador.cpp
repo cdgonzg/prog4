@@ -1,18 +1,22 @@
 #include "iterador.h"
 
-Iterador(){
+Iterador :: Iterador(){
+    tope = 0;
+    actual = 0;
 }
 
-void agregar(Estadia){
+void Iterador :: agregar(Estadia estadia){
     if(tope < TAMANIO){
         iter[tope] = estadia;
         tope++;
     }
 }
-bool hayMasEstadias(){
+
+bool Iterador :: hayMasEstadias(){
     return actual < tope;
 }
-Estadia ProximaEstadia(){
+
+Estadia Iterador :: ProximaEstadia(){
     if(hayMasEstadias()){
         return iter[actual++];
     }
