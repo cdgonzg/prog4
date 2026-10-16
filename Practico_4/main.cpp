@@ -1,6 +1,7 @@
 #include "Fecha.h"
 #include "Estadia.h"
 #include "iterador.h"
+#include "Estadias.h"
 #include <iostream>
 
 int main() {
@@ -12,15 +13,18 @@ int main() {
 
     
     Estadia estadia1(0, f1, f2);
-    std::cout << "Número de la estadía: " << estadia1.getNumero() << std::endl;
+    //std::cout << "Número de la estadía: " << estadia1.getNumero() << std::endl;
     Estadia estadia2(1, f3, f4);
-    std::cout << "Número de la estadía: " << estadia2.getNumero() << std::endl;
-    Iterador iter;
-    iter.agregar(estadia1);
-    iter.agregar(estadia2);
-    while(iter.hayMasEstadias()){
-        Estadia e = iter.ProximaEstadia();
-        std::cout << "Número de la estadía: " << e.getNumero() << std::endl;
+    //std::cout << "Número de la estadía: " << estadia2.getNumero() << std::endl;
+    Estadias estadias;
+    estadias.insert(estadia1);
+    estadias.insert(estadia2);
+    std::cout << "Lista de estadias " << std::endl;
+    for (int i = 0; i < 100; i++) {
+        if (estadias.member(i)) {
+            Estadia e = estadias.find(i);
+            std::cout << "Número de la estadía: " << e.getNumero() << std::endl;
+        }
     }
 
     return 0;
