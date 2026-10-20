@@ -1,0 +1,34 @@
+Soy el constructor por defecto   Mi Dato es 0
+Soy el constructor comun  Mi dato es 10
+Soy el constructor de copia  Mi Dato es 10
+Soy el constructor por defecto   Mi Dato es 0
+
+Antes de invocar a metodo1 m3.dato vale 10
+Soy el constructor de copia  Mi Dato es 10
+Este es el metodo 1 
+	 El dato del objeto implicito es 10
+	 El dato del parametro es 11
+Soy el destructor Mi dato es 11
+Despues de invocar a metodo1 m3.dato vale 10
+
+
+Antes de invocar a metodo2 m3.dato vale 10
+ Este es el metodo 2 
+	 El dato del objeto implicito es 10
+	 El dato del parametro es 11
+Despues de invocar a metodo2 m3.dato vale 11
+
+
+Antes de invocar a metodo3
+Soy el constructor por defecto   Mi Dato es 0
+Este es el metodo 3 
+	 El dato del objeto implicito es 0
+	 El dato del objeto a devolver es 2
+Soy el destructor Mi dato es 2
+
+Despues de invocar a metodo3 m4.dato vale 2
+
+Soy el destructor Mi dato es 2
+Soy el destructor Mi dato es 11
+Soy el destructor Mi dato es 10
+Soy el destructor Mi dato es 0
