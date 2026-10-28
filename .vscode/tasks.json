@@ -1,46 +1,105 @@
 {
-    "tasks": [
-        {
-            "type": "process",
-            "label": "Compilar practico 4",
-            "command": "/usr/bin/g++",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-std=c++17",
-                "-Wall",
-                "-Wextra",
-                "-pedantic",
-                "-g",
-                "${workspaceFolder}/Practico_4/main.cpp",
-                "${workspaceFolder}/Practico_4/Fecha.cpp",
-                "${workspaceFolder}/Practico_4/Estadia.cpp",
-                "${workspaceFolder}/Practico_4/iterador.cpp",
-                "${workspaceFolder}/Practico_4/Estadias.cpp",
-                "-o",
-                "${workspaceFolder}/Practico_4/fecha_app"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Compila main.cpp, Fecha.cpp, Estadia.cpp, iterador.cpp y Estadias.cpp y genera Practico_4/fecha_app."
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "Compilar Practico_5",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+            "-std=c++17",
+            "-Wall",
+            "-Wextra",
+            "-g",
+            "*.cpp",
+            "-o",
+            "practico5"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}/Practico_5"
         },
-        {
-            "type": "process",
-            "label": "Ejecutar practico 4",
-            "command": "${workspaceFolder}/Practico_4/fecha_app",
-            "dependsOn": "Compilar practico 4",
-            "options": {
-                "cwd": "${workspaceFolder}/Practico_4"
-            },
-            "problemMatcher": []
+        "problemMatcher": "$gcc",
+        "group": "build",
+        "presentation": {
+            "reveal": "always",
+            "panel": "shared",
+            "clear": true
         }
-    ],
-    "version": "2.0.0"
+    },
+    {
+        "label": "Compile C++ file",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+            "-std=c++17",
+            "${file}",
+            "-o",
+            "${fileDirname}/${fileBasenameNoExtension}"
+        ],
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": "$msCompile",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "shared",
+            "clear": true
+        }
+    },
+    {
+        "label": "Run C++ file",
+        "type": "shell",
+        "command": "${fileDirname}/${fileBasenameNoExtension}",
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+            "reveal": "always",
+            "panel": "shared",
+            "clear": true
+        }
+    },
+    {
+        "label": "Compile and run C++ file",
+        "dependsOn": [
+            "Compile C++ file"
+        ],
+        "dependsOrder": "sequence",
+        "command": "${fileDirname}/${fileBasenameNoExtension}",
+        "type": "shell",
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+            "reveal": "always",
+            "panel": "shared",
+            "clear": true
+        }
+    },
+    {
+        "type": "cppbuild",
+        "label": "C/C++: g++ build active file",
+        "command": "/usr/bin/g++",
+        "args": [
+            "-fdiagnostics-color=always",
+            "-g",
+            "${file}",
+            "-o",
+            "${fileDirname}/${fileBasenameNoExtension}"
+        ],
+        "options": {
+            "cwd": "${fileDirname}"
+        },
+        "problemMatcher": [
+            "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: /usr/bin/g++"
+    }
+]
 }
