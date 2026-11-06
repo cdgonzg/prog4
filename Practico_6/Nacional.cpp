@@ -1,26 +1,26 @@
 #include "Nacional.h"
 
-Nacional(int cod, String name, float precio, String dpto, bool sub): Articulo(cod, name, precio), departamento(dpto);
+Nacional::Nacional(int cod, String name, float precio, String dpto, bool sub): Articulo(cod, name, precio), departamento(dpto)
 {
     subsidiado = sub;
 }
 
-String getDepartamento(){
+String Nacional::getDepartamento(){
     return departamento;
 }
 
-bool getSubsidiado(){
+bool Nacional::getSubsidiado(){
     return subsidiado;
 }
 
-void setSubsidiado(bool sub){
+void Nacional::setSubsidiado(bool sub){
     subsidiado = sub;
 }
 
-float precioVenta(){
+float Nacional::precioVenta(){
     float precio = Articulo::precioVenta();
-    if (!getSubsidiado){
-        if (dpto=="Montevideo") {
+    if (!getSubsidiado()){
+        if (departamento=="Montevideo") {
             precio = precio * 1.15;
         } else {
             precio = precio * 1.20;
@@ -29,10 +29,10 @@ float precioVenta(){
     return precio;
 }
 
-String tipoArticulo(){
+String Nacional::tipoArticulo(){
     return ("Nacional");
 }
 
-~Nacional(){
+Nacional::~Nacional(){
 
 }

@@ -1,14 +1,15 @@
 #ifndef NACIONAL_H
 #define NACIONAL_H
-#include "String.h"
+#include "Articulo.h"
+#include "../Practico_5/String.h"
 
-class Nacional {
-    public:
+class Nacional : public Articulo {
+    private:
         String departamento;
         bool subsidiado;
 
-    private:
-        Nacional(int, String, float, String, bool)
+    public:
+        Nacional(int, String, float, String, bool);
         String getDepartamento();
         bool getSubsidiado();
         void setSubsidiado(bool);
