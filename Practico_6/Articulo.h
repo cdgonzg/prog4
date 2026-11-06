@@ -1,6 +1,6 @@
 #ifndef ARTICULO_H
 #define ARTICULO_H
-#include "String.h"
+#include "../Practico_5/String.h"
 
 class Articulo {
     private:

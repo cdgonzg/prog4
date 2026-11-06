@@ -23,7 +23,7 @@ float Nacional::precioVenta(){
         if (departamento=="Montevideo") {
             precio = precio * 1.15;
         } else {
-            precio = precio * 1.20;
+            precio = precio * 1.10;
         }
     }
     return precio;

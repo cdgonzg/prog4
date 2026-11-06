@@ -20,7 +20,7 @@ void Articulo::setPrecioCosto(float valor){
 }
 
 float Articulo::precioVenta(){
-    return (precioCosto * 1.2);
+    return precioCosto * 1.2;
 }
 
 Articulo::~Articulo(){

@@ -18,12 +18,12 @@ void Importado::setImpuesto(float imp){
 }
 
 float Importado::precioVenta(){
-    float precioFinal;
+    float precioFinal = Articulo::precioVenta();
     Fecha f(31, 12, 2008);
     if (fechaImportacion < f){
-         precioFinal = getPrecioCosto() * 2;
+         precioFinal = precioFinal + (impuesto * 1.8);
     } else {
-         precioFinal = getPrecioCosto() * 1.8;
+         precioFinal = precioFinal + (impuesto * 2);
     }
     return precioFinal;
 }
