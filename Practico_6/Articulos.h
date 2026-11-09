@@ -3,7 +3,7 @@
 #include "Articulo.h"
 #include "../Practico_4/Fecha.h"
 
-const int MAX_ARTICULOS = 50;
+const int cant = 50;
 
 class Articulos {
     private:
@@ -13,7 +13,13 @@ class Articulos {
              NodoL * sig;
         }NodoLis;
 
-        NodoLis * Hash[MAX_ARTICULOS];
+        NodoLis * Hash[cant];
+        int h(int);
+        void crearLista (NodoL * &);
+        void destruirLista (NodoL * &);
+        bool perteneceLista (NodoL *, int);
+        void insFrontEnLista (NodoL * &, Articulo *);
+        Articulo * obtenerEnLista (NodoL *, int);
         
     public:
         Articulos();
