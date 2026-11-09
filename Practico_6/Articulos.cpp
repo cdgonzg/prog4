@@ -82,7 +82,7 @@ void Articulos::remove(int id) {
     NodoLis * current = Hash[cubeta];
     NodoLis * prev = NULL;
     while (current != NULL) {
-        if (current->info->getId() == id) {
+        if (current->info->getCodigo() == id) {
             if (prev == NULL) {
                 Hash[cubeta] = current->sig;
             } else {
